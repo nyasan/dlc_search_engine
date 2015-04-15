@@ -1,0 +1,19 @@
+# NetBeans specific #
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/nbactions.xml
+/nb-configuration.xml
+
+# Log files
+*.log
+/log/
+
+# Database folder
+/VocabularioDB/
+
+#Eclipse files
+.classpath
+.settings/
