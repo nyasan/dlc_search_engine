@@ -2,11 +2,11 @@ package dlc.search.engine.util;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
@@ -19,8 +19,7 @@ public abstract class ProcessorUtils {
 	 * @return
 	 */
 	public static Map<String, Integer> process(File file) {
-		// String doc = "41575-8.txt";
-		Map<String, Integer> mapa = new HashMap<>();
+		Map<String, Integer> mapa = new TreeMap<>();	//new HashMap<>();
 		
 		try {
 			try (FileInputStream fis = new FileInputStream(file)) {
