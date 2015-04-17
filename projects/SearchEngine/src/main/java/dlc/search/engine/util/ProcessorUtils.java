@@ -1,5 +1,8 @@
 package dlc.search.engine.util;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,9 +10,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.regex.Pattern;
+
+import org.apache.log4j.Logger;
 
 public abstract class ProcessorUtils {
 
@@ -40,7 +43,7 @@ public abstract class ProcessorUtils {
 				}
 			}
 		} catch (IOException ex) {
-			Logger.getLogger(ProcessorUtils.class.getName()).log(Level.SEVERE,
+			Logger.getLogger(ProcessorUtils.class.getName()).log(Level.ERROR,
 					null, ex);
 		}
 		

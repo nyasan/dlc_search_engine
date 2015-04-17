@@ -1,10 +1,10 @@
 package dlc.search.engine.domain;
 
+import org.apache.log4j.Logger;
+
 import java.util.Map;
 import java.util.HashMap;
 import java.util.TreeMap;
-
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class Vocabulary {
 	public static final int DOC_1 = 1;
