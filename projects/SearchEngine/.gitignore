@@ -1,6 +1,7 @@
 /build/
 /bin/
 /logs/
+/lib/
 .gradle/
 .classpath
 .settings/

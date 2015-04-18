@@ -19,6 +19,7 @@ repositories {
 //Project dependencies
 dependencies {
 	compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
+	compile 'org.apache.commons:commons-lang3:3.4'
 	compile 'jstl:jstl:1.2'
 	compile 'log4j:log4j:1.2.17'
 	

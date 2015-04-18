@@ -4,6 +4,11 @@ public class VocabularyEntry {
 	private String word;
 	private int nr;
 	private int maxTf;
+	private PostingList postingList;
+	
+	public VocabularyEntry() {
+		postingList = new PostingList();
+	}
 	
 	public String getWord() {
 		return word;
@@ -31,6 +36,14 @@ public class VocabularyEntry {
 	
 	public void addNr() {
 		this.nr++;
+	}
+	
+	public PostingList getPostingList() {
+		return postingList;
+	}
+	
+	public void setPostingList(PostingList postingList) {
+		this.postingList = postingList;
 	}
 	
 	@Override
