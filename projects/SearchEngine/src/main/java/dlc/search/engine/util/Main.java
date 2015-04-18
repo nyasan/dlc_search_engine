@@ -6,10 +6,10 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 import dlc.search.engine.domain.Document;
-import dlc.search.engine.domain.Processor;
-import dlc.search.engine.domain.ProcessorFile;
-import dlc.search.engine.domain.ProcessorGoogleDrive;
 import dlc.search.engine.domain.Vocabulary;
+import dlc.search.engine.processor.Processor;
+import dlc.search.engine.processor.ProcessorFile;
+import dlc.search.engine.processor.ProcessorGoogleDrive;
 
 public class Main {
 	
@@ -52,6 +52,8 @@ public class Main {
 		processDocuments(vocabulary, processor, docs[0]);
 		processDocuments(vocabulary, processor, docs[1]);
 		processDocuments(vocabulary, processor, docs[2]);
+		
+		vocabulary.sortPostingList();
 		
 		System.out.println(vocabulary.getVocabulary().size());
 		

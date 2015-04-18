@@ -1,4 +1,4 @@
-package dlc.search.engine.domain;
+package dlc.search.engine.processor;
 
 import java.io.IOException;
 import java.net.MalformedURLException;

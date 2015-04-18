@@ -34,7 +34,7 @@ public class PostingEntry implements Comparable<PostingEntry>{
 			throw new IllegalArgumentException("Other must not be null");
 		}
 		
-		return this.tf - other.tf;
+		return other.tf - this.tf;
 	}
 	
 	@Override

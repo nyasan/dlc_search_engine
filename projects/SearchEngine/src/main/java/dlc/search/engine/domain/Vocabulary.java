@@ -2,6 +2,7 @@ package dlc.search.engine.domain;
 
 import org.apache.log4j.Logger;
 
+import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -79,6 +80,12 @@ public class Vocabulary {
 		
 		logger.debug(String.format("Finaliza procesamiento documento - Tiempo: %d ms",
 				System.currentTimeMillis() - start));
+	}
+	
+	public void sortPostingList() {
+		for (VocabularyEntry entry : vocabulary.values()) {
+			entry.getPostingList().sort();
+		}
 	}
 	
 	@Override

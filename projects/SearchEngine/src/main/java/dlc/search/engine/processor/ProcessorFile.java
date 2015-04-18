@@ -1,4 +1,4 @@
-package dlc.search.engine.domain;
+package dlc.search.engine.processor;
 
 import java.io.File;
 import java.io.FileInputStream;
