@@ -11,24 +11,26 @@ import org.apache.log4j.Logger;
 
 public class ProcessorGoogleDrive implements Processor {
 	
-	Logger logger = Logger.getLogger(ProcessorGoogleDrive.class);
+	private static Logger logger = Logger.getLogger(ProcessorGoogleDrive.class);
 
 	@Override
 	public Map<String, Integer> process(String uri) {
 		// TODO Auto-generated method stub
-		// throw new NotImplementedException("TODO");
-
+		return null;
+	}
+	
+	public static void pruebaObtenerListadoArchivos(){
 		URL fileURL;
 		try {
 			fileURL = new URL(
 					"https://drive.google.com/folderview?id=0B_R7SeoAotsmUUtYendIX04zRjA&usp=sharing");
-					//"https://doc-0c-ao-docs.googleusercontent.com/docs....");
+			//"https://doc-0c-ao-docs.googleusercontent.com/docs....");
 			try (Scanner readFile = new Scanner(fileURL.openStream())) {
 				while (readFile.hasNext()) {
 					String fileData = readFile.nextLine();
 					System.out.println(fileData);
 					logger.debug(fileData);
-					
+
 				}
 			}
 		} catch (MalformedURLException e) {
@@ -39,7 +41,6 @@ public class ProcessorGoogleDrive implements Processor {
 			e.printStackTrace();
 		}
 
-		return null;
 	}
 
 }

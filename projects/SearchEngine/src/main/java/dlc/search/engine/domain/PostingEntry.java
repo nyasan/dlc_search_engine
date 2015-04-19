@@ -1,6 +1,6 @@
 package dlc.search.engine.domain;
 
-public class PostingEntry implements Comparable<PostingEntry>{
+public class PostingEntry {
 	private Document document;
 	private int tf;
 	
@@ -29,17 +29,8 @@ public class PostingEntry implements Comparable<PostingEntry>{
 	}
 
 	@Override
-	public int compareTo(PostingEntry other) {
-		if(other == null) {
-			throw new IllegalArgumentException("Other must not be null");
-		}
-		
-		return other.tf - this.tf;
-	}
-	
-	@Override
 	public String toString() {
-		return String.format("%s - %d", document, tf);
+		return String.format("%s --> tf = %d", document.getName(), tf);
 	}
 	
 	

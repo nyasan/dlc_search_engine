@@ -34,6 +34,6 @@ public class Document {
 	
 	@Override
 	public String toString() {
-		return String.format("%s - %s", name, uri);
+		return String.format("name:%s - path:%s", name, uri);
 	}
 }

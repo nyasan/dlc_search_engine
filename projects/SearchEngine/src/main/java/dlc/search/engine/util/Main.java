@@ -21,7 +21,7 @@ public class Main {
 	private static Vocabulary vocabulary;
 	private static Processor processor; 
 
-	private static String[] docs = new String[]{PATH_DOCS + "d1.txt", PATH_DOCS + "d2.txt", PATH_DOCS + "d3.txt" };
+	private static String[] docs = new String[]{"d1.txt", "d2.txt", "d3.txt" };
 	
 	public static void testDocuments(Processor processor) {
 		for (int i = 0; i < docs.length; i++) {
@@ -34,9 +34,11 @@ public class Main {
 		
 	}
 	
-	public static void processDocuments(Vocabulary vocabulary, Processor processor, String docName) {
-		Map<String, Integer> docMap = processor.process(docName);
-		Document document = new Document(docName);
+	public static void processDocuments(Vocabulary vocabulary, Processor processor, String docName, String path) {
+		String abspath = path + docName; 
+		
+		Map<String, Integer> docMap = processor.process(abspath);
+		Document document = new Document(docName, abspath);
 		vocabulary.addDocument(docMap, document);
 	}
 	
@@ -49,9 +51,9 @@ public class Main {
 		Processor processor = new ProcessorFile();
 //		Processor processor = new ProcessorGoogleDrive();
 		
-		processDocuments(vocabulary, processor, docs[0]);
-		processDocuments(vocabulary, processor, docs[1]);
-		processDocuments(vocabulary, processor, docs[2]);
+		processDocuments(vocabulary, processor, docs[0], PATH_DOCS);
+		processDocuments(vocabulary, processor, docs[1], PATH_DOCS);
+		processDocuments(vocabulary, processor, docs[2], PATH_DOCS);
 		
 		vocabulary.sortPostingList();
 		
